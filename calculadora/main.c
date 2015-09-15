@@ -4,24 +4,25 @@
 
 enum operaciones
 {
-	SUMA = 1,
+	SALIR=0,
+	SUMA,
 	RESTA,
 	MULTIPLICACION,
 	DIVISION,
-}
+};
 void introducir_datos(float *num1, float *num2)
 {
 	float num;
 	printf("Introduce el primer numero: ");
-	scanf ("%d",&num);
+	scanf ("%f",&num);
 	*num1=num;
 	printf("Introduce el primer numero: ");
-	scanf ("%d",&num);
+	scanf ("%f",&num);
 	*num2=num;
 }
 void imprimir_resultado(float res)
 {
-	printf("El resultado es: %f", rest);
+	printf("El resultado es: %f", res);
 }
 void imprimir_menu()
 {
@@ -50,10 +51,27 @@ int main()
 				break;
 			case RESTA:
 				introducir_datos(&numero1, &numero2);
-				resultador = resta(numero1, numero2);
+				resultado = resta(numero1, numero2);
+				imprimir_resultado(resultado);
 				break;
+			case MULTIPLICACION:
+				introducir_datos(&numero1, &numero2);
+				resultado = multi(numero1, numero2);
+				imprimir_resultado(resultado);
+				break;
+			case DIVISION:
+				introducir_datos (&numero1, &numero2);
+				resultado = divi(numero1,numero2);
+				imprimir_resultado(resultado);
+				break;
+			case SALIR:
+				break;
+			default : 
+				printf("Opcion no valida\n");
 		}		
 
 	}
 	while (opc!=0);
+	return 0;
 }
+
