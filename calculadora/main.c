@@ -22,7 +22,7 @@ void introducir_datos(float *num1, float *num2)
 }
 void imprimir_resultado(float res)
 {
-	printf("El resultado es: %f", res);
+	printf("El resultado es: %.2f\n", res);
 }
 void imprimir_menu()
 {
