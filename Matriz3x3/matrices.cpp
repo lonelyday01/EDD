@@ -2,17 +2,17 @@
 
 using namespace std;
 
-void llenar_datos(int matriz[][3]);
+void llenar_datos(float matriz[][3]);
 
-void mostrar(int matriz[][3]);
+void mostrar(float matriz[][3]);
 
-void multiplicar(int matriz1[][3], int matriz2[][3]);
+void multiplicar(float matriz1[][3], float matriz2[][3]);
 
-int matriz[3][3], resultado[3][3],suma[3][3];
+float matriz[3][3], resultado[3][3];
 
 int main()
 {
-	int matriz1[3][3],matriz2[3][3];
+	float matriz1[3][3],matriz2[3][3];
 	cout <<"Llenar la primera matriz de 3x3"<<endl;
 	llenar_datos(matriz1);
 	cout <<"Llenar la segunda matriz de 3x3"<<endl;
@@ -26,14 +26,14 @@ int main()
 	mostrar(resultado);
 	return 0;
 }
-void llenar_datos(int matriz[][3])
+void llenar_datos(float matriz[][3])
 {
 	int f=0,c=0;
         for (f=0;f<3;f++)
                 for (c=0;c<3;c++)
                         cin >> matriz[f][c];
 }
-void mostrar(int matriz[][3])
+void mostrar(float matriz[][3])
 {
 	int f=0,c=0;
         for (f=0;f<3;f++)
@@ -45,7 +45,7 @@ void mostrar(int matriz[][3])
         }
 }
 
-void multiplicar(int matriz1[][3], int matriz2[][3])
+void multiplicar(float matriz1[][3], float matriz2[][3])
 {
 	int f=0,c=0,k=0;
 	for (f=0;f<3;f++)
