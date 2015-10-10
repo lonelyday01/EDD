@@ -38,7 +38,7 @@ void mostrar(float matriz[][3])
         {
 		printf("[");
                 for (c=0;c<3;c++)
-                        printf("%f ,",matriz[f][c]);
+                        printf("%.2f ,",matriz[f][c]);
                 printf("]\n");
         }
 }
