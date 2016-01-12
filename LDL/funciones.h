@@ -30,4 +30,8 @@ void insertar_antes(int x, NODO &L, int y);
 
 void mostrar_invertida(NODO &L);
 
+void ordenar_ascendente(NODO &L);
+
+void ordenar_descendente(NODO &L);
+
 #endif
