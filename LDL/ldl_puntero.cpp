@@ -136,6 +136,31 @@ int main()
 				cin.get();
 			} while (buscar(x, L) == 0);
 			break;
+		case 12:
+			do
+			{
+				system("clear");
+				cout << "1.-Ordenamiento Ascedente\n";
+				cout << "2.-Ordenamiento Descendente\n";
+				cout << "0.-Atras\n";
+				cout << "Selecciona una opcion -->> ";
+				cin >> opc2;
+				switch (opc2)
+				{
+				case 1:system("clear");
+					ordenar_ascendente(L);
+					cin.ignore(1024, '\n');
+					cin.get();
+					break;
+				case 2:system("clear");
+					ordenar_descendente(L);
+					cin.ignore(1024, '\n');
+					cin.get();
+					break;
+				case 0:break;
+				default:cout << "seleccione una opcion valida";
+				}
+			} while (opc2 != 0);	
 			
 		case 0:break;
 		}
